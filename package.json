@@ -1,0 +1,25 @@
+{
+  "name": "work-india",
+  "version": "1.0.0",
+  "description": "Work India Assignment to create Login and Sign up API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Akshat Khanna",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonfile": "^6.0.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/mysql": "^2.15.19"
+  }
+}
