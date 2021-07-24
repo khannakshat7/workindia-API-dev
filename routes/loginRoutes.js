@@ -2,6 +2,7 @@ var mysql = require('mysql');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
+// Database config
 var connection = mysql.createConnection({
   host     : "localhost",
   user     : "root",
@@ -24,6 +25,8 @@ connection.connect(function(err) {
   console.log('connected to Database');
 });
 
+
+//  Router to handle register request
 exports.register = async function(req,res){
   const password = req.body.password;
   const encryptedPassword = await bcrypt.hash(password, saltRounds)
@@ -46,6 +49,7 @@ exports.register = async function(req,res){
   });
 }
 
+//  Router to handle login request
 exports.login = async function(req,res){
   var username= req.body.username;
   var password = req.body.password;
